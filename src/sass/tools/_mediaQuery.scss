@@ -1,0 +1,32 @@
+// ========================================
+// メディアクエリ
+// ========================================
+
+// small firstの場合
+$BREAK_POINTS: (
+  "sm": (
+    min-width: 640px,
+  ),
+  "md": (
+    min-width: 768px,
+  ),
+  "lg": (
+    min-width: 1000px,
+  ),
+  "xl": (
+    min-width: 1280px,
+  ),
+) !default;
+
+@mixin mq($breakPoint) {
+  @if map-has-key($BREAK_POINTS, $breakPoint) {
+    @media screen and #{inspect(map-get($BREAK_POINTS, $breakPoint))} {
+      @content;
+    }
+  }
+
+  // マップ型で定義されていない値が呼び出された時はエラーを返す
+  @else {
+    @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map-keys($BREAK_POINTS)}";
+  }
+}

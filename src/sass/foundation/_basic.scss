@@ -1,0 +1,18 @@
+@use "../tools/global" as *;
+
+body {
+	font-family: map-get($FONT_FAMILY, "base");
+	font-size: map-get($FONT_SIZE, "body");
+	padding: 32px;
+	letter-spacing: 0.25em;
+}
+
+img {
+	vertical-align: bottom;
+	border-style: none;
+}
+
+::selection {
+	background: map-get($COLOR, "base");
+	color: map-get($COLOR, "white");
+}
