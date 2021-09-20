@@ -1,0 +1,21 @@
+@use "../../tools/global" as *;
+
+.c_copyright {
+	font-size: 24px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: map-get($COLOR, "white");
+	visibility: hidden;
+	z-index: 200;
+	&.is-copyright-show {
+		visibility: visible;
+	}
+	a {
+		&:hover,
+		&:active {
+			background: map-get($COLOR, "black");
+			color: map-get($COLOR, "white");
+		}
+	}
+}

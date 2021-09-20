@@ -1,0 +1,22 @@
+@use "../tools/global" as *;
+
+.l_sketch-list {
+	position: relative;
+	z-index: 100;
+	display: inline-block;
+	pointer-events: none;
+	mix-blend-mode: exclusion;
+	&__item {
+		pointer-events: all;
+		color: map-get($COLOR, "white");
+		margin-bottom: 1em + 0.2em;
+		cursor: pointer;
+		font-size: 16px;
+		display: block;
+		width: fit-content;
+		&.is-item-selected {
+			background: map-get($COLOR, "white");
+			color: map-get($COLOR, "black");
+		}
+	}
+}

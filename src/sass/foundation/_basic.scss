@@ -3,16 +3,23 @@
 body {
 	font-family: map-get($FONT_FAMILY, "base");
 	font-size: map-get($FONT_SIZE, "body");
-	padding: 32px;
 	letter-spacing: 0.25em;
+	background: map-get($COLOR, "black");
 }
 
-img {
-	vertical-align: bottom;
-	border-style: none;
+h1 {
+	font-size: 24px;
+	margin-bottom: 1em;
+	background: map-get($COLOR, "white");
+	display: block;
+	cursor: pointer;
+	width: fit-content;
+	position: sticky;
+	top: 0;
+	z-index: 200;
 }
 
 ::selection {
-	background: map-get($COLOR, "base");
+	background: map-get($COLOR, "black");
 	color: map-get($COLOR, "white");
 }
