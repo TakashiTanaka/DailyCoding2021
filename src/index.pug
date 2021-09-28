@@ -1,4 +1,4 @@
-include data.pug
+include _data.pug
 
 doctype html
 html(lang="ja")
@@ -26,6 +26,8 @@ html(lang="ja")
 			each item in data.june
 				li(data-url= item.url, data-month= "04", data-id= item.id).l_sketch-list__item #{item.title}
 			each item in data.july
+				li(data-url= item.url, data-month= "04", data-id= item.id).l_sketch-list__item #{item.title}
+			each item in data.sep
 				li(data-url= item.url, data-month= "04", data-id= item.id).l_sketch-list__item #{item.title}
 		//- .c_code-icon ShowCode
 		code.l_code.prettyprint#js_code
