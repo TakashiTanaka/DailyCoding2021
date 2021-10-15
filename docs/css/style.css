@@ -462,16 +462,89 @@ template {
 body {
   font-family: "Helvetica", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 16px;
-  padding: 32px;
   letter-spacing: 0.25em;
+  background: #000;
 }
 
-img {
-  vertical-align: bottom;
-  border-style: none;
+h1 {
+  font-size: 24px;
+  margin-bottom: 1em;
+  background: #fff;
+  display: block;
+  cursor: pointer;
+  width: fit-content;
+  position: sticky;
+  top: 0;
+  z-index: 200;
 }
 
 ::selection {
-  background: #0a5b40;
+  background: #000;
   color: #fff;
+}
+
+.l_code {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  max-width: 50%;
+}
+
+.l_sketch-list {
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+}
+.l_sketch-list__item {
+  pointer-events: all;
+  color: #fff;
+  margin-bottom: 1.2em;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  width: fit-content;
+}
+.l_sketch-list__item.is-item-selected {
+  background: #fff;
+  color: #000;
+}
+
+.c_i-frame {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.c_copyright {
+  font-size: 24px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  visibility: hidden;
+  z-index: 200;
+}
+.c_copyright.is-copyright-show {
+  visibility: visible;
+}
+.c_copyright a:hover, .c_copyright a:active {
+  background: #000;
+  color: #fff;
+}
+
+.c_code-icon {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  cursor: pointer;
 }
